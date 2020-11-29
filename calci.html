@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            margin: auto;
+            width: 100%;
+            background-color: burlywood;
+            background-image: url('https://i.pinimg.com/originals/d1/17/88/d11788e6dc8943bc0cd439b21549729d.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+       .title{
+           font-size: xx-large;
+           margin-bottom: 40px;
+           text-align: center;
+           margin-top: 30px;
+           width: 500px;   
+           color:#ffff;  
+           margin-left: 80px; 
+           font-weight: 500px;   
+           font-family: Georgia, 'Times New Roman', Times, serif;
+       }
+       .calci{
+           text-align: center;
+          font-size: auto;
+           margin-left: 150px;
+           font-size: xx-large;
+       }
+       input[type="button"] {
+        font-size: xx-large;
+        background-color:#fabea7;
+        width: 100%;
+        border-radius: 10px;
+       }
+       input[type="button"]:hover{
+           color:#fbe2e5;
+       }
+       input[type="text"] {
+        font-size: xx-large;
+        width: 100%;
+       }
+    </style>
+</head>
+<body>
+    <div class="title">Basic Calculator</div>
+<form name="calculator">
+    <table border="1" class="calci">
+        <tr class="text">
+            <td colspan="4"><input type="text" name="display" id="display"  disabled</td>
+        </tr>
+        <tr>
+            <td><input type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+            <td><input type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+            <td><input type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+            <td><input type="button" class="operator" name="plus" value="+" onclick="calculator.display.value += '+'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+            <td><input type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+            <td><input type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+            <td><input type="button" class="operator" name="minus" value="-" onclick="calculator.display.value += '-'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+            <td><input type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+            <td><input type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></td>
+            <td><input type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="dot" value="." onclick="calculator.display.value = '.'"></td>
+            <td><input type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+            <td><input type="button" name="nine" value="π" onclick="calculator.display.value += '3.14'"></td>
+            <td><input type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="lt" value="(" onclick="calculator.display.value += '('"></td>
+            <td><input type="button" name="rt" value=")" onclick="calculator.display.value += ')'"></td>
+            <td><input type="button" name="clr" value="clr" onclick="calculator.display.value = ' '"></td>
+            <td><input type="button" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+            
+        </tr>
+        
+    </table>
+    
+</form>
+
+
+    
+</body>
+</html>
